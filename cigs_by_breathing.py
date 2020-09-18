@@ -20,7 +20,8 @@ def analyze_air(concentration):
             time_per_cig += " " + str(int(whole)) + " minutes"
             if frac > 0.0: # there are seconds
                 seconds = round(60*frac)
-                time_per_cig += " and " + str(seconds) + " seconds"
+                if seconds:
+                    time_per_cig += " and " + str(seconds) + " seconds"
 
         if(concentration > 10000):
             print("RIP you")
